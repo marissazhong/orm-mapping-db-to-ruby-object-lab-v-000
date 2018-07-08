@@ -18,8 +18,8 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE name = name;
     SQL
-    DB[:conn].execute(sql)
-
+    result = DB[:conn].execute(sql)
+    new_from_db(result)
   end
 
   def save
