@@ -23,8 +23,7 @@ class Student
       SELECT * FROM students WHERE name = ? LIMIT 1;
     SQL
     result = DB[:conn].execute(sql, name)
-    puts result[0]
-    self.new_from_db(result)
+    self.new_from_db(result[0])
   end
 
   def save
