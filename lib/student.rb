@@ -18,7 +18,6 @@ class Student
     sql = <<-SQL
       SELECT * FROM students WHERE name = name;
     SQL
-
     DB[:conn].execute(sql)
 
   end
